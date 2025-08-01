@@ -1,14 +1,15 @@
 service:
-  info: Customer Microservice 
+  name: Customer
+  info: Customer Microservice (Development)
 spring:
   jpa:
     hibernate:
       ddl-auto: update
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:1515/customer
-    username: postgres
-    password: smaimuth
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
   security:
     oauth2:
       resourceserver:
