@@ -1,0 +1,18 @@
+service:
+  info: Customer Microservice 
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:1515/customer
+    username: postgres
+    password: smaimuth
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/dms
+server:
+  port: 9000
